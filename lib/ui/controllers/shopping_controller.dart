@@ -35,7 +35,7 @@ class ShoppingController extends GetxController {
     // finalmente actualizar entries usando el indice y el elemento actualizado
     var index =
         entries.indexOf(entries.firstWhere((element) => element.id == id));
-    entries[index].quantity += 1;
+    entries[index].quantity++;
     entries.refresh();
 
     calcularTotal();
@@ -48,7 +48,7 @@ class ShoppingController extends GetxController {
     var index =
         entries.indexOf(entries.firstWhere((element) => element.id == id));
     if (entries[index].quantity > 0) {
-      entries[index].quantity -= 1;
+      entries[index].quantity--;
     }
     entries.refresh();
     calcularTotal();
